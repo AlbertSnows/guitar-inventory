@@ -1,12 +1,13 @@
 {
 	"compilerOptions": {
-		"module": "es6",
+		"lib": ["ES2022", "DOM"],
+		"module": "ES2022",
 		"esModuleInterop": true,
-		"target": "es6",
+		"target": "ES2022",
 		"noImplicitAny": true,
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"sourceMap": true,
-		"outDir": "dist",
+		"outDir": "dist/",
 		"baseUrl": ".",
 		"paths": {
 				"*": [
@@ -14,8 +15,12 @@
 				]
 		}
 },
-"include": [
-		"dist/**/*.ts"
-, "src/index.ts"], 
+"ts-node": {
+	"esm": true,
+	"experimentalSpecifierResolution": "node"
+},
+"include": [	
+	"dist/**/*.ts", 
+	"src/index.ts"], 
 "exclude": []
 }
