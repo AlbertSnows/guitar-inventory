@@ -1,26 +1,31 @@
 {
-	"compilerOptions": {
-		"lib": ["ES2022", "DOM"],
-		"module": "ES2022",
-		"esModuleInterop": true,
-		"target": "ES2022",
-		"noImplicitAny": true,
-		"moduleResolution": "Node",
-		"sourceMap": true,
-		"outDir": "dist/",
-		"baseUrl": ".",
-		"paths": {
-				"*": [
-						"node_modules/*"
-				]
-		}
-},
-"ts-node": {
-	"esm": true,
-	"experimentalSpecifierResolution": "node"
-},
-"include": [	
-	"dist/**/*.ts", 
-	"src/index.ts"], 
-"exclude": []
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": [
+      "es2019",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "declaration": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "isolatedModules": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true
+  }
 }
