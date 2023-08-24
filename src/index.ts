@@ -29,3 +29,10 @@ routes.register( app );
 app.listen(port, () => {
 	console.info( `server started at http://localhost:${ port }` );
 });
+
+// Configure Express to use EJS
+app.set( "views", path.join( __dirname, "views" ) );
+app.set( "view engine", "ejs" );
+
+// Configure Express to serve static files in the public folder
+app.use( express.static( path.join( __dirname, "public" ) ) );
