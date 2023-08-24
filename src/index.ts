@@ -7,6 +7,9 @@ import * as routes from "./routes/index.js";
 
 dotenv.config();
 const app = express();
+
+// Configure Express to parse incoming JSON data
+app.use( express.json() );
 const port = process.env.SERVER_PORT; // default port to listen
 
 // Configure Express to use EJS

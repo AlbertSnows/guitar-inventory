@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
 import fs from "fs-extra";
-import { Client } from "pg";
+import pkg from "pg";
 
+const { Client } = pkg;
 const init = async () => {
     // read environment variables
     dotenv.config();
