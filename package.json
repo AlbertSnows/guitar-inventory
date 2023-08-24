@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
-    "copy-assets": "ts-node tools/copy_assets",
+    "copy-assets": "node --loader ts-node/esm tools/copy_assets.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
     "build": "npm-run-all clean lint tsc copy-assets",
