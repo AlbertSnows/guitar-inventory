@@ -2,9 +2,11 @@
   "name": "guitar-inventory",
   "version": "1.0.0",
   "description": "",
+  
   "type": "module",
   "main": "dist/src/index.js",
   "scripts": {
+    "initdb": "node --loader ts-node/esm tools/initdb.ts",
     "clean": "rimraf dist/*",
     "copy-assets": "node --loader ts-node/esm tools/copy_assets.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -23,7 +25,9 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "pg": "^8.11.3",
+    "pg-promise": "^10.15.4"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
@@ -31,6 +35,7 @@
     "@types/express-session": "^1.17.7",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^20.5.4",
+    "@types/pg": "^8.10.2",
     "@types/shelljs": "^0.8.12",
     "fs-extra": "^10.1.0",
     "nodemon": "^2.0.22",
