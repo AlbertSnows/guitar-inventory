@@ -2,8 +2,8 @@ import express from 'express';
 import path from "path";
 import dotenv from "dotenv";
 import { fileURLToPath } from 'url';
-import * as sessionAuth from "./middleware/sessionAuth";
-import * as routes from "./routes";
+import * as sessionAuth from "./middleware/session_auth.js";
+import * as routes from "./routes/index.js";
 
 dotenv.config();
 const app = express();

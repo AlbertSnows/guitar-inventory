@@ -1,6 +1,8 @@
-import { ExpressOIDC } from "@okta/oidc-middleware";
+import pkg from "@okta/oidc-middleware";
 import session from "express-session";
+const { ExpressOIDC } = pkg;
 export const register = (app) => {
+    var _a;
     // Create the OIDC client
     const oidc = new ExpressOIDC({
         client_id: process.env.OKTA_CLIENT_ID,
@@ -14,7 +16,7 @@ export const register = (app) => {
     app.use(session({
         resave: true,
         saveUninitialized: false,
-        secret: process.env.SESSION_SECRET
+        secret: (_a = process.env.SESSION_SECRET) !== null && _a !== void 0 ? _a : ["foo"]
     }));
     // Configure Express to use the OIDC client router
     app.use(oidc.router);

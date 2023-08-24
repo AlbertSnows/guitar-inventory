@@ -10,6 +10,7 @@
     "alwaysStrict": true,
 		"outDir": "dist",
     "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": false,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
