@@ -7,12 +7,13 @@ const port = 8080; // default port to listen
 // Configure Express to use EJS
 const FILENAME = fileURLToPath(import.meta.url);
 const DIRNAME = path.dirname(FILENAME);
-app.set( "views", path.join( DIRNAME, "views" ) );
+const PARENT = path.dirname(DIRNAME);
+app.set( "views", path.join( PARENT, "views" ) );
 app.set( "view engine", "ejs" );
 
 // define a route handler for the default home page
 app.get( "/", ( req, res ) => {
-    res.send( "Hello world!" );
+    res.render( "index" );
 } );
 
 // start the Express server
