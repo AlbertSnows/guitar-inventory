@@ -62,7 +62,7 @@ export const register = ( app: express.Application ) => {
                 FROM    guitars
                 WHERE   user_id = $1
                 AND     id = $2`,
-                [ userId, req.params.id ], 
+                [ userId, req.params.id ],
                 ( r: any ) => r.rowCount );
             return res.json( { id } );
         } catch ( err ) {
