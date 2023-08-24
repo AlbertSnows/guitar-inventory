@@ -1,5 +1,8 @@
-# Todo
+# Guitar inventory
+Repo doesn't fully work because I don't want to sign up for okta. Just testing putting node, express, and typescript together. They don't seem to play very well. 
 
-ts-node not working
-do
-`node --loader ts-node/esm tools/copy_assets.ts`
+## Troubleshooting
+
+ts-node throws weird errors
+-> 
+`node --loader ts-node/esm {command}`
