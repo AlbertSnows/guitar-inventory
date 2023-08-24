@@ -31,8 +31,8 @@ app.listen(port, () => {
 });
 
 // Configure Express to use EJS
-app.set( "views", path.join( __dirname, "views" ) );
+app.set( "views", path.join( DIRNAME, "views" ) );
 app.set( "view engine", "ejs" );
 
 // Configure Express to serve static files in the public folder
-app.use( express.static( path.join( __dirname, "public" ) ) );
+app.use( express.static( path.join( DIRNAME, "public" ) ) );

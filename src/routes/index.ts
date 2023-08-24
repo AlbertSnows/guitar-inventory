@@ -1,5 +1,5 @@
 import * as express from "express";
-import * as api from "./api"
+import * as api from "./api.js"
 
 export const register = ( app: express.Application ) => {
     // const oidc = app.locals.oidc;

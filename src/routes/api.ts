@@ -1,5 +1,7 @@
 import * as express from "express";
-import pgPromise, { ParameterizedQuery } from "pg-promise";
+import * as pkg from "pg-promise";
+import pgPromise from "pg-promise";
+const { ParameterizedQuery } = pkg;
 
 export const register = ( app: express.Application ) => {
     const port = parseInt( process.env.PGPORT || "5432", 10 );
@@ -30,7 +32,7 @@ export const register = ( app: express.Application ) => {
         } catch ( err ) {
             // tslint:disable-next-line:no-console
             console.error(err);
-            res.json( { error: err.message || err } );
+            return res.json( { error: (err as Error).message || err } );
         }
     } );
 
@@ -50,7 +52,7 @@ export const register = ( app: express.Application ) => {
         } catch ( err ) {
             // tslint:disable-next-line:no-console
             console.error(err);
-            res.json( { error: err.message || err } );
+            return res.json( { error: (err as Error).message || err } );
         }
     } );
 
@@ -68,7 +70,7 @@ export const register = ( app: express.Application ) => {
         } catch ( err ) {
             // tslint:disable-next-line:no-console
             console.error(err);
-            res.json( { error: err.message || err } );
+            return res.json( { error: (err as Error).message || err } );
         }
     } );
 };
